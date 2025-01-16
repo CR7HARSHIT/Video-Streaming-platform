@@ -6,7 +6,7 @@ import UserIcon from "../assets/images/usericon.png"
 
 const Header=()=>{
 	return (
-		<div className="m-2 ml-0 mr-0 grid grid-flow-col grid-cols-12 border border-solid">
+		<div className="m-2 ml-0 mr-0 grid grid-flow-col grid-cols-12 border border-solid shadow-xl">
 		 
 			<div id="left" className="m-4 flex flex-row justify-start col-span-3 h-[40px]">
              <button className="cursor-pointer hover:bg-slate-200 rounded-full"><img src={HamburgerMenuIcon} alt="HamburgerMenuIcon" className="h-[40px]" /></button>
