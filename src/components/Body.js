@@ -1,4 +1,5 @@
-import MainContainer from "./MainContainer";
+import { Outlet } from "react-router-dom";
+
 import Sidebar from "./Sidebar";
 import { useSelector } from "react-redux";
 const Body=()=>{
@@ -7,7 +8,7 @@ const Body=()=>{
 	<div id="Body" className=" flex flex-row  ">
 	
 	{status?<Sidebar />:null}
-	<MainContainer/>
+	<Outlet/>
 	</div>
    )
 }
