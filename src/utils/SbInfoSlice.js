@@ -7,8 +7,11 @@ const SbInfoSlice=createSlice({
    reducers:{
 	toggleSidebar:(state)=>{
       state.IsOpen=!state.IsOpen;
+	},
+	closeSidebar:(state)=>{
+       state.IsOpen=false;
 	}
    }
 })
-export const {toggleSidebar}=SbInfoSlice.actions;
+export const {toggleSidebar,closeSidebar}=SbInfoSlice.actions;
 export const SbInfoSlice_reducers=SbInfoSlice.reducer;
