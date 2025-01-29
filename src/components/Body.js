@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 const Body=()=>{
 	const status=useSelector((store)=> store.SbInfoSlice.IsOpen)
    return (
-	<div id="Body" className=" flex flex-row  ">
+	<div id="Body" className=" flex flex-row ">
 	
 	{status?<Sidebar />:null}
 	<Outlet/>

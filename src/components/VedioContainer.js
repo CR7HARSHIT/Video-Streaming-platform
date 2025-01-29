@@ -25,7 +25,7 @@ const VedioContainer=()=>{
 	  }
 	return (
 		
-			<div className="flex flex-row flex-wrap">
+			<div className=" flex flex-row flex-wrap">
 			{
 				arr.map((vedioinfo)=>{
                    return (<Link to={"/watch?v="+vedioinfo.id}><Vedio Info={vedioinfo}/></Link>)
