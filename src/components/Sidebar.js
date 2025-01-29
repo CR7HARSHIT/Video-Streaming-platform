@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 const Sidebar=()=>{
 	return (
 		<div className="w-48 border-2 border-solid shadow-2xl">
 		<div>
 			<ul className="m-5 ml-3 p-8 font-bold text-lg">
-				<li>Home</li>
+				<li className="cursor-pointer hover:bg-slate-200"><Link to={"/"}>Home</Link></li>
 				<li>Shorts</li>
 				<li>Subscriptions</li>
 			</ul>
