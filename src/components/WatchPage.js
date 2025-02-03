@@ -3,6 +3,8 @@ import { useLocation } from "react-router-dom";
 import { APIKEY, SINGLEVEDIOAPI } from "../utils/Constants";
 import { closeSidebar } from "../utils/SbInfoSlice";
 import { useDispatch } from "react-redux";
+import LiveChat from "./LiveChat";
+import Comments from "./Comments";
 const WatchPage=()=>{
 	const location=useLocation();
      const queryParams = new URLSearchParams(location.search);
@@ -26,17 +28,24 @@ const WatchPage=()=>{
       CloseSB()
 	 },[])
 	return (
-		<div className="m-8">
+		<div className="w-full">
+		<div className="flex flex-row ">
+		<div className="mt-32 m-8">
 			<iframe 
 			
-			width="560"
-			 height="400"
+			width="1050"
+			 height="550"
 			  src={`https://www.youtube.com/embed/${id}`}
 			   title="YouTube video player"
 			    frameBorder="0"
 				 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope picture-in-picture; web-share"
 			 referrerPolicy="strict-origin-when-cross-origin" allowFullScreen>
 			 </iframe>
+			 
+		</div>
+		<LiveChat/>
+		</div>
+		<Comments/>
 		</div>
 
 	)
