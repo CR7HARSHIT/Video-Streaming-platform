@@ -28,7 +28,7 @@ const WatchPage=()=>{
       CloseSB()
 	 },[])
 	return (
-		<div className="mt-3 h-[calc(100vh-80px)] overflow-y-auto ">
+		<div className="mt-3 h-[calc(100vh-80px)] overflow-y-auto w-full">
 		<div className="flex flex-row ">
 		<div className="mt-32 m-8">
 			<iframe 
