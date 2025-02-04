@@ -24,7 +24,7 @@ const Header=()=>{
 		}
 		else {
 	    const targetUrl=`http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=${searchQuery}`;
-        const proxyUrl=`http://localhost:5000/proxy?url=${encodeURIComponent(targetUrl)}`;
+        const proxyUrl=`https://video-streaming-platform-server.onrender.com/proxy?url=${encodeURIComponent(targetUrl)}`;
         const response=await fetch(proxyUrl);
 		const data=await response.json();
         console.log(`API CALL ${searchQuery}, data ${data}`)

@@ -11,7 +11,7 @@ const CommentMessage = ({ data }) => {
         className="w-10 h-10 rounded-full object-cover"
       />
       <div className="flex-1">
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-1">
           <span className="text-sm font-semibold text-gray-800">{data.name}</span>
           <span className="text-xs text-gray-500">• 2 hours ago</span> 
         </div>

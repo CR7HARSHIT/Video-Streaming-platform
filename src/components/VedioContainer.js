@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { APIKEY, VedioAPIURL } from "../utils/Constants";
+
 import Vedio from "./Vedio";
 import { Link } from "react-router-dom";
 const VedioContainer=()=>{
 	const [arr,setarr]=useState([]);
+	const APIKEY=process.env.REACT_APP_APIKEY
+	const VedioAPIURL=process.env.REACT_APP_VedioAPIURL
 	useEffect(()=>{
-   
 	vedioListFn()
 	},[])
 	const vedioListFn=async ()=>{

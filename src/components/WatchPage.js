@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { APIKEY, SINGLEVEDIOAPI } from "../utils/Constants";
 import { closeSidebar } from "../utils/SbInfoSlice";
 import { useDispatch } from "react-redux";
 import LiveChat from "./LiveChat";
@@ -10,6 +9,8 @@ const WatchPage=()=>{
      const queryParams = new URLSearchParams(location.search);
 	 const id=queryParams.get('v');
 	 const Dispatch=useDispatch();
+	const APIKEY=process.env.REACT_APP_APIKEY
+	const SINGLEVEDIOAPI=process.env.REACT_APP_SINGLEVEDIOAPI
 	 useEffect(()=>{
     async  function getvediodata (){
 		try {
