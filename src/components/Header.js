@@ -16,28 +16,30 @@ const Header=()=>{
 	function ChangeStatus (){
 		Dispatch(toggleSidebar())
 	}
-	async function getSuggestions(){
-		
-		if(CacheObj[searchQuery]) {
-			 setSuggestions(CacheObj[searchQuery])
-			 Dispatch(putItem({searchQuery,value:CacheObj[searchQuery]}))
-		}
-		else {
-	    const targetUrl=`http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=${searchQuery}`;
-        const proxyUrl=`https://video-streaming-platform-server.onrender.com/proxy?url=${encodeURIComponent(targetUrl)}`;
-        const response=await fetch(proxyUrl);
-		const data=await response.json();
-        console.log(`API CALL ${searchQuery}, data ${data}`)
-        setSuggestions(data[1]);
-		const value=data[1];
-		Dispatch(putItem({searchQuery,value}))
-	}
-	 }
+	
+	 
 	useEffect(()=>{
+		async function getSuggestions(){
+		
+			if(CacheObj[searchQuery]) {
+				 setSuggestions(CacheObj[searchQuery])
+				 Dispatch(putItem({searchQuery,value:CacheObj[searchQuery]}))
+			}
+			else {
+			const targetUrl=`http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=${searchQuery}`;
+			const proxyUrl=`https://video-streaming-platform-server.onrender.com/proxy?url=${encodeURIComponent(targetUrl)}`;
+			const response=await fetch(proxyUrl);
+			const data=await response.json();
+			console.log(`API CALL ${searchQuery}, data ${data}`)
+			setSuggestions(data[1]);
+			const value=data[1];
+			Dispatch(putItem({searchQuery,value}))
+		}}
      const Call=setTimeout(()=> getSuggestions(),200);
 	 return ()=>{
 		clearTimeout(Call)
 	 }
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	},[searchQuery])
 
 	return (

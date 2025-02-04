@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { closeSidebar } from "../utils/SbInfoSlice";
@@ -6,11 +7,12 @@ import LiveChat from "./LiveChat";
 import Comments from "./Comments";
 const WatchPage=()=>{
 	const location=useLocation();
+	const APIKEY=process.env.REACT_APP_APIKEY
+	const SINGLEVEDIOAPI=process.env.REACT_APP_SINGLEVEDIOAPI
      const queryParams = new URLSearchParams(location.search);
 	 const id=queryParams.get('v');
 	 const Dispatch=useDispatch();
-	const APIKEY=process.env.REACT_APP_APIKEY
-	const SINGLEVEDIOAPI=process.env.REACT_APP_SINGLEVEDIOAPI
+	
 	 useEffect(()=>{
     async  function getvediodata (){
 		try {
