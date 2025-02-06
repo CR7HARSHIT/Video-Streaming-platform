@@ -70,7 +70,7 @@ const Header=()=>{
 			</div>
 			{seeSuggestions && (
 				<div className="fixed pl-5 bg-white w-[32%] rounded-md ">
-				{suggestions.map((item)=> <Link to={"/results?search_query="+item}><div className="">{item}</div></Link>) }
+				{suggestions.map((item)=> (<div className="">{item}</div>)) }
 			</div>)}
 			</div>
 			<div id="Right" className=" m-4 flex flex-row justify-evenly col-span-3 h-[40px] ">
