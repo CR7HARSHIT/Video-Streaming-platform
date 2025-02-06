@@ -3,13 +3,18 @@ export const APIKEY=`AIzaSyAERGRkHvxOGAUn6kIOOnMimZkVmWK_3VY`
 export const SINGLEVEDIOAPI=`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics`
 export const COMMENTS=[
 {
-	name:"harsh",
+	name:"Aditya",
+	id:0,
+	message:"I like the vedio",
+	replies:[]
+}
+	,{name:"harsh",
 	id:1,
-	message:"hello",
+	message:"Can Anyone recommend more of this category",
 	replies:[{
 		name:"Sandepp",
 		id:2,
-		message:"I like hate vedio vey much",
+		message:"What is the nam eof content creator",
 		replies:[{
 			name:"Rohit",
 			id:3,
