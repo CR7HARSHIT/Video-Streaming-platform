@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { toggleSidebar } from "../utils/SbInfoSlice"
 import { useEffect, useState } from "react"
 import { putItem } from "../utils/lruSlice"
+import { Link } from "react-router-dom"
 const Header=()=>{
 	const [searchQuery,setSearchQuery]=useState("");
 	const [suggestions,setSuggestions]=useState([]);
@@ -46,7 +47,7 @@ const Header=()=>{
 		
 		<div className="fixed top-0 left-0 w-full z-50 grid grid-flow-col grid-cols-12 border border-solid shadow-xl bg-white p-2">
 		 
-			<div id="left" className=" m-4 flex flex-row justify-start col-span-3 h-[40px]">
+			<div id="left" className=" m-4 flex flex-row justify-start col-span-3 h-[32px]">
              <button className="cursor-pointer hover:bg-slate-200 rounded-full"
 			  onClick={ChangeStatus}
 			 ><img src={HamburgerMenuIcon} alt="HamburgerMenuIcon" className="h-[40px]" /></button>
@@ -69,7 +70,7 @@ const Header=()=>{
 			</div>
 			{seeSuggestions && (
 				<div className="fixed pl-5 bg-white w-[32%] rounded-md ">
-				{suggestions.map((item)=> <div className="">{item}</div>) }
+				{suggestions.map((item)=> <Link to={"/results?search_query="+item}><div className="">{item}</div></Link>) }
 			</div>)}
 			</div>
 			<div id="Right" className=" m-4 flex flex-row justify-evenly col-span-3 h-[40px] ">
