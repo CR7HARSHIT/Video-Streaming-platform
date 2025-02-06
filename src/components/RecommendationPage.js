@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Link, useSearchParams } from "react-router-dom"
 import ButtonList from "./ButtonList"
 import { useEffect, useState } from "react"
@@ -31,7 +32,7 @@ const RecommendationPage=()=>{
 
   
          <div className="mt-[140px] ml-[60px] h-[calc(100vh-140px)] overflow-auto p-4">
-		 <div className=" flex flex-row flex-wrap">
+		 <div className=" flex flex-col">
 			{
 				 arr.map((vedioinfo)=>{
                     return (<Link to={"/watch?v="+vedioinfo.id.videoId}><RPvedio Info={vedioinfo}/></Link>)

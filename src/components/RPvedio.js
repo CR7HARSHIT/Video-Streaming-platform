@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom";
 
 const RPvedio=({
 	Info
 	})=>{
-		const id=Info.id;
+		
 		const snippet=Info.snippet;
 
 	return (
