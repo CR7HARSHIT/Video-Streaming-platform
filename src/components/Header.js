@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { toggleSidebar } from "../utils/SbInfoSlice"
 import { useEffect, useState } from "react"
 import { putItem } from "../utils/lruSlice"
+import { Link } from "react-router-dom"
 
 const Header=()=>{
 	const [searchQuery,setSearchQuery]=useState("");
@@ -70,7 +71,11 @@ const Header=()=>{
 			</div>
 			{seeSuggestions && (
 				<div className="fixed pl-5 bg-white w-[32%] rounded-md ">
-				{suggestions.map((item)=> (<div className="">{item}</div>)) }
+				{suggestions.map((item)=> (<Link 
+				  key={item}
+				  to={"/results?v=" + item}
+				  onMouseDown={(e) => e.preventDefault()}
+				><div className="block cursor-pointer p-2 hover:bg-gray-200" >{item}</div></Link>)) }
 			</div>)}
 			</div>
 			<div id="Right" className=" m-4 flex flex-row justify-evenly col-span-3 h-[40px] ">
