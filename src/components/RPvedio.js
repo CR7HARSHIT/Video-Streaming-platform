@@ -6,7 +6,7 @@ const RPvedio=({
 		const snippet=Info.snippet;
 
 	return (
-		<div className="flex flex-row w-full my-3 h-auto p-3 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-200">
+		<div className="flex flex-row w-full my-3 h-40 p-3 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-200">
 		{/* Thumbnail */}
 		<div className="w-48 flex-shrink-0">
 		  <img 
