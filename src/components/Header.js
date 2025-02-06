@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { toggleSidebar } from "../utils/SbInfoSlice"
 import { useEffect, useState } from "react"
 import { putItem } from "../utils/lruSlice"
-import { Link } from "react-router-dom"
+
 const Header=()=>{
 	const [searchQuery,setSearchQuery]=useState("");
 	const [suggestions,setSuggestions]=useState([]);
