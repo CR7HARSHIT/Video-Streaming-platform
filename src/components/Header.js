@@ -52,7 +52,7 @@ const Header=()=>{
              <button className="cursor-pointer hover:bg-slate-200 rounded-full"
 			  onClick={ChangeStatus}
 			 ><img src={HamburgerMenuIcon} alt="HamburgerMenuIcon" className="h-[40px]" /></button>
-			 <Link to={"/"}><img src={YTLogo} alt="YTLogo" className="ml-3 cursor-pointer"/></Link>
+			 <Link to={"/"}><img src={YTLogo} alt="YTLogo" className="ml-3 cursor-pointer h-[40px]"/></Link>
 			</div>
 			<div id="Middle" className=" m-4 col-span-6 ">
 			<div className=" flex flex-row justify-items-center h-[40px] ">
