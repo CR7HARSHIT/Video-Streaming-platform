@@ -57,7 +57,7 @@ const Header=()=>{
 			<div id="Middle" className=" m-4 col-span-6 ">
 			<div className=" flex flex-row justify-items-center h-[40px] ">
             <input id="SearchBox"
-			 placeholder="Search"
+			 placeholder="Search feature works will take some time.Please try"
 			  Style="text-indent: 10px"
 			   type="text"
 			   value={searchQuery}
